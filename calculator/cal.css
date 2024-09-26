@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient(red ,yellow,green);
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background-color: rgb(2, 5, 8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    width: 260px;
+}
+
+#display {
+    width: 90%;
+    height: 50px;
+    background-color: #3b2e2e;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Initial shadow */
+}
+
+/* Glow effect on hover */
+button:hover  {
+    background-color: #666;
+    box-shadow: 0 0 15px #0ff, 0 0 25px #0ff, 0 0 35px #0ff; /* Neon blue glow */
+}
+
+/* Active button click effect */
+button:active {
+    background-color: #444;
+    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff; /* Intense neon blue glow */
+}

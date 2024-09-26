@@ -1,0 +1,859 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: aquamarine;
+  /* background: url(https://cdn.wallpapersafari.com/79/43/K9gnRN.jpg); */
+  width: auto;
+  height: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Light Mode */
+body.light-mode {
+  background-color: #ffffff;
+  color: rgb(110, 9, 212);
+}
+
+header.light-mode {
+  background-color: #f1f1f1;
+}
+
+footer.light-mode {
+  background-color: #f1f1f1;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: rgb(241, 9, 241);
+}
+
+header.dark-mode {
+  background-color: #1c1c1c;
+}
+
+footer.dark-mode {
+  background-color: #1c1c1c;
+}
+
+/* Toggle Switch */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+#theme-switch {
+  display: none; /* Hide the default checkbox */
+}
+
+label {
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+.header {
+  position: sticky;
+  width: 100%;
+  height: 10%;
+  top: 6%;
+  background: rgb(186, 100, 83);
+  background: linear-gradient(
+    150deg,
+    rgba(186, 100, 83, 1) 7%,
+    rgba(147, 142, 132, 1) 13%,
+    rgba(224, 215, 70, 0.9067431850789096) 17%,
+    rgba(173, 194, 109, 1) 22%,
+    rgba(140, 159, 135, 1) 28%,
+    rgba(121, 86, 201, 1) 33%,
+    rgba(79, 200, 122, 1) 38%,
+    rgba(56, 147, 153, 1) 45%,
+    rgba(109, 24, 198, 0.7388809182209469) 55%,
+    rgba(161, 119, 167, 1) 65%,
+    rgba(209, 72, 213, 1) 76%,
+    rgba(218, 71, 117, 1) 89%,
+    rgba(212, 72, 122, 1) 94%,
+    rgba(235, 69, 103, 1) 100%
+  );
+  border-radius: 40px 40px 40px 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  position: relative;
+  font-size: 40px;
+  color: #2303f4;
+  text-decoration: rgb(171, 50, 50);
+  font-weight: 1000;
+  font-style: italic;
+  text-shadow: 20px;
+  border-radius: 10px;
+  width: 160px;
+  align-content: center;
+}
+.logo {
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #9370db, 0 0 25px #03e9f4,
+    0 0 100px #03e9f4;
+}
+.logo:hover {
+  color: cyan;
+}
+.navbar a {
+  display: inline;
+  font-size: 25px;
+  color: rgb(222, 211, 211);
+  text-decoration: solid;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: 1ms;
+  border-radius: 12px;
+}
+.navbar a:hover {
+  color: rgb(225, 17, 17);
+  width: auto;
+  background: rgb(227, 198, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(227, 198, 180, 1) 41%,
+    rgba(223, 206, 172, 1) 55%,
+    rgba(220, 213, 166, 1) 66%,
+    rgba(210, 233, 148, 1) 100%
+  );
+}
+
+.home {
+  position: relative;
+  width: 100vw;
+  justify-content: space-between;
+  height: 105vh;
+  /* background: url(https://cdn.wallpapersafari.com/79/43/K9gnRN.jpg); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.image {
+  width: 300px;
+  height: 360px;
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  background-image: url(./1648104093769-02.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* Added a subtle border */
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5);
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.image:hover {
+  height: 400px; /* Slightly increase height on hover */
+  transform: scale(1.1); /* Scale slightly instead of doubling */
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.7); /* Increase shadow on hover */
+  filter: brightness(1.1); /* Slight brightness effect on hover */
+}
+
+/* Adding a pseudo-element for an overlay effect */
+.image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  border-radius: 20px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Transition for the overlay */
+}
+
+.image:hover::after {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.homee-context {
+  width: 40vw;
+  position: relative;
+  text-align: center;
+}
+.homee-context h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+/* Style for the typing text */
+.typed-text {
+  font-weight: bold;
+  color: #00d5ff;
+}
+
+/* Blinking cursor style */
+.cursor {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #a600ff;
+  animation: blink 0.7s infinite;
+}
+
+/* Blink animation for cursor */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.homee-context h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: coral;
+  margin: -3px 0;
+}
+.homee-context p {
+  font-size: 20px;
+}
+.home-scale a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #89253e,
+    #3a6186
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #89253e,
+    #3a6186
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border: 4px solid skyblue;
+  border-radius: 40%;
+  font-size: 25px;
+  color: white;
+  text-decoration: dotted;
+  margin: 30px 15px 30px 0;
+}
+.home-scale a:hover {
+  background-color: aqua;
+  color: #081;
+  box-shadow: 0 0 20px aqua;
+}
+.box {
+  display: inline-block;
+  padding: 10px 28px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    301deg,
+    rgba(131, 58, 180, 1) 5%,
+    rgba(70, 54, 159, 1) 21%,
+    rgba(165, 50, 138, 1) 35%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(42, 253, 191, 1) 66%,
+    rgba(215, 184, 130, 1) 83%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border-radius: 40px;
+  font-size: 15px;
+  color: #081;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.box:hover {
+  box-shadow: 0 0 5px cyan, o o 25px cyan 0 0 100px cyan, 0 0 200px cyan;
+}
+/*  //////////////////////////////////////////////////////*/
+.courses {
+  padding: 50px 0;
+  /* background-image: url("https://cdn.wallpapersafari.com/79/43/K9gnRN.jpg"); */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.courses h2 {
+  font-size: 3em;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #ffd700; /* Gold color for heading */
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.course-item {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.course-item h3 {
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #ffd700;
+}
+
+.course-item p {
+  font-size: 1.2em;
+}
+
+.course-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px aqua;
+}
+
+/* Main content for courses and certificates */
+.courses-certificates {
+  flex: 3; /* Larger width for main content */
+  padding: 20px;
+  background: rgb(66, 215, 191);
+  background: linear-gradient(
+    90deg,
+    rgba(66, 215, 191, 1) 19%,
+    rgba(7, 116, 138, 1) 50%,
+    rgba(4, 116, 192, 1) 73%,
+    rgba(3, 116, 213, 1) 82%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.image-container {
+  max-width: 100%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.image-container img {
+  width: 50%;
+  max-width: 100%; /* Adjust max-width to control image size */
+  height: auto;
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+.image-container img:hover {
+  transform: scale(1.1); /* Image zooms in slightly on hover */
+  box-shadow: 0 8px 16px aqua; /* Stronger shadow on hover */
+}
+/* Main container layout */
+.main-container {
+  display: flex;
+  padding: 20px;
+}
+
+/* Skills aside section on the left */
+.skills-section {
+  flex: 1; /* Smaller width for aside */
+  padding: 20px;
+  background: rgb(66, 215, 191);
+  background: linear-gradient(
+    90deg,
+    rgba(66, 215, 191, 1) 19%,
+    rgba(7, 116, 138, 1) 50%,
+    rgba(4, 116, 192, 1) 73%,
+    rgba(3, 116, 213, 1) 82%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  border-right: 1px solid #ddd; /* Border on the right */
+  margin-right: 20px; /* Space between aside and main content */
+}
+
+/* Skill items styling */
+.skills-section h2 {
+  font-size: 2rem;
+  color: white;
+  background: #ff4e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #f9d423,
+    #ff4e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #f9d423,
+    #ff4e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column; /* Stack skills vertically */
+  gap: 15px;
+}
+
+.skill {
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #89253e,
+    #3a6186
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #89253e,
+    #3a6186
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect */
+.skill:hover {
+  /* background-color: #45a049; */
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #89253e,
+    #3a6186
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #89253e,
+    #3a6186
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  transform: scale(1.05);
+}
+.skills-section {
+  flex: 1; /* Adjust width as needed */
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ddd; /* Optional border */
+}
+.skills-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Certificate container for courses */
+.certificate-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certificate {
+  width: 100px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.certificate:hover {
+  transform: scale(1.1);
+}
+.download-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #89253e,
+    #3a6186
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #89253e,
+    #3a6186
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* Button background color */
+  color: white; /* Text color */
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #49f6e7; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.main-container {
+  background: #bbd2c5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #292e49,
+    #536976,
+    #bbd2c5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #292e49,
+    #536976,
+    #bbd2c5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  padding: 20px;
+}
+
+.projects-section {
+  background: #cc95c0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #7aa1d2,
+    #dbd4b4,
+    #cc95c0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #7aa1d2,
+    #dbd4b4,
+    #cc95c0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 50px 0;
+}
+
+.projects-title {
+  text-align: center; /* Center the title */
+  font-size: 3em; /* Increase font size */
+  background: linear-gradient(to top, #ea07c0, #0ba2c8); /* Gradient color */
+  -webkit-background-clip: text; /* Apply gradient to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent for gradient */
+  margin-bottom: 40px; /* Space between title and content */
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards */
+}
+
+.project-card {
+  background: white; /* Background color for project cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Prevent overflow of content */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+  width: 300px; /* Fixed width for project cards */
+  max-width: 100%; /* Ensure responsiveness */
+  text-align: center; /* Center text */
+}
+
+.project-card img {
+  width: 100%; /* Make image responsive */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
+  transition: transform 0.3s; /* Smooth zoom effect */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Scale up card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.project-card:hover img {
+  transform: scale(1.1); /* Zoom image on hover */
+}
+
+.project-title {
+  margin: 10px 0 5px; /* Spacing for title */
+  font-size: 1.5em; /* Increase title size */
+}
+
+.project-link {
+  display: inline-block; /* Make link a block */
+  margin: 10px 0; /* Spacing for link */
+  padding: 8px 16px; /* Padding for the button */
+  background: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border-radius: 4px; /* Rounded corners for button */
+  text-decoration: none; /* Remove underline */
+  transition: background 0.3s; /* Smooth background change */
+}
+
+.project-link:hover {
+  background: #0056b3; /* Darker shade on hover */
+}
+
+.resume-section {
+  padding: 50px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    301deg,
+    rgba(131, 58, 180, 1) 5%,
+    rgba(70, 54, 159, 1) 21%,
+    rgba(165, 50, 138, 1) 35%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(42, 253, 191, 1) 66%,
+    rgba(215, 184, 130, 1) 83%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  /* background-image: url("https://cdn.wallpapersafari.com/79/43/K9gnRN.jpg"); */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px cyan;
+  max-width: 800px;
+  margin: 50px auto;
+  color: white; /* Set text color to white for readability */
+  position: relative; /* Ensure it respects other layout elements */
+}
+
+.resume-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: gold; /* Text color for the title */
+}
+
+.resume-card {
+  padding: 20px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Add a dark transparent background to the content for better contrast */
+  color: white; /* Text color inside resume card */
+  border-radius: 10px;
+}
+
+.resume-card h2 {
+  font-size: 1.8em;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  color: #03e9f4;
+}
+
+.resume-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-card ul li {
+  padding: 5px 0;
+  margin: 1px;
+}
+.resume-card strong {
+  color: #9370db;
+}
+
+.download-resume {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.download-resume:hover {
+  background-color: cyan;
+  color: #282c34;
+}
+
+/* Testimonials Section */
+/* .testimonials-section {
+  padding: 50px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.testimonial-carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonial {
+  display: none;
+  padding: 20px;
+  font-size: 1.2em;
+  color: #333;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.testimonial h4 {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #007bff;
+} */
+
+/* Carousel Controls */
+/* .carousel-controls {
+  margin-top: 20px;
+}
+
+.carousel-controls .prev-btn,
+.carousel-controls .next-btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  color: #007bff;
+  user-select: none;
+}
+
+.carousel-controls .prev-btn:hover,
+.carousel-controls .next-btn:hover {
+  color: #0056b3;
+} */
+
+/* Footer Styling */
+.footer {
+  background: #e6dada; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #274046,
+    #e6dada
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #274046,
+    #e6dada
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 30px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.footer-about,
+.footer-social,
+.footer-contact {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-about h3,
+.footer-social h3,
+.footer-contact h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: rebeccapurple;
+}
+
+.footer-about p,
+.footer-contact p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 4px solid red;
+  border-radius: 40%;
+  font-size: 25px;
+  color: white;
+  text-decoration: dotted;
+  margin: 30px 15px 30px 0;
+}
+
+.footer-social a:hover {
+  box-shadow: 0 0 20px cyan;
+  color: hsl(from red 2 5 10);
+  -webkit-box-shadow: 0px 0px 51px 7px rgba(255, 46, 126, 0.97);
+  -moz-box-shadow: 0px 0px 51px 7px rgba(255, 46, 126, 0.97);
+  box-shadow: 0px 0px 51px 7px rgba(255, 46, 126, 0.97);
+}
+
+.footer-bottom {
+  background: #0407;
+  border-top: 1px solid #444;
+  padding-top: 5px;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #7cfc00;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

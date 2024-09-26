@@ -1,0 +1,438 @@
+html,body{
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(0, 0, 0);
+    color: white;
+}
+.header{
+    width: 100%;
+    height: 90vmin;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./background.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    padding-left: 100px;
+    padding-right: 60px;
+}
+.logo{
+    width:150px;
+    height: 2.5rem;
+}
+nav button{
+    border: 2px;
+    background: #db0001;
+    color:#fff ;
+    padding: 7px 20px;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.lang{
+    display: inline;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #Fff;
+    padding: 7px 10px;
+}
+.lang img{
+    width: 8px;
+    margin-left: 10px;
+}
+.header-content{
+    margin-top: 150px;
+    text-align: center;
+}
+.header-content strong{
+    font-size: 60px;
+}
+.header-content p{
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.header-content input{
+    margin-top: 5px;
+     margin-left: 50px;
+    padding: 17px 8%;
+    background: transparent;
+    border: 1px solid white;
+    flex: 1;
+    color: #fff;
+    font-size: 16px;
+}
+.header-content input:hover{
+    border: 1px solid rgb(230, 11, 11);
+    background: rgba(234, 222, 222, 0.228);
+
+}
+.header-content button{
+    background-color: #db0001;
+    padding: 15px 35px;
+    font-size: 20px;
+    border-radius: 4px;
+    color: white;
+    border: 0;
+}
+/* .curved-line {
+    width: 100%;
+    height: 1px;
+    border-top: 5px solid lightcoral;
+    border-radius: 2px;
+    position: relative;
+    margin-top: 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 255, 0.6); /
+} */
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+} */
+
+/* Slider container */
+.slide-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.639);
+}
+
+/* Slide settings */
+.slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide-box {
+    position: relative;
+    min-width: 180px; /* Adjust size of each box */
+    margin: 10px;
+    background-color: black;
+    border: 5px solid red;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Numbering on slides */
+.number {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.slide-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Arrow buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Limit visible slides to 5 */
+.slide {
+    width: calc(5 * (180px + 20px)); /* 5 slides + margins */
+}
+
+.text{
+    text-align: justify;
+    padding-left: 150px;
+}
+
+/* Section Container */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Individual Box */
+.info-box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    /* background:linear-gradient(135deg ,black, blue); */
+    border-radius: 30px;
+    background: linear-gradient(145deg,black, black, #191970, #570f04);
+    box-shadow:  47px 47px 87px #320b05,
+             -47px -47px 87px #6c190b;
+    /* border-radius: 10px; */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-box:hover {
+    transform: scale(1.05);
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Icon Styles */
+.icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 40px;
+    color: #555;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(181, 43, 5, 0.685);
+
+}
+
+/* Light red glow effect on hover */
+.icon:hover {
+    color: #ff5555;
+    box-shadow: 0 0 20px rgba(255, 85, 85, 0.8);
+}
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+} */
+
+.faq-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+.faq {
+    background-color:#1a2421;
+    color: #ddd;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #f9f9f9;
+}
+
+.faq-question:hover {
+    background-color: #242124;
+}
+
+h4 {
+    margin: 0;
+    color: #f9f9f9;
+    font-size: 18px;
+}
+
+.fa-plus {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+    
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #1b1b1b;
+    border-top: 1px  #100c08;
+}
+
+.faq.open .faq-answer {
+    display: block;
+}
+
+.faq.open .fa-plus {
+    transform: rotate(45deg); /* Rotates the icon to show minus */
+}
+
+
+.end_text{
+align-items: center;
+text-align: center;
+font-size: 14px;
+}
+.end_text input{
+    margin-top: 5px;
+     margin-left: 50px;
+    padding: 17px 10%;
+    background: transparent;
+    border: 1px solid white;
+    flex: 1;
+    color: #fff;
+    font-size: 16px;
+}
+.end_text input:hover{
+    border: 1px solid red;
+    
+}
+.end_text button{
+    background-color: #db0001;
+    padding: 15px 35px;
+    font-size: 20px;
+    border-radius: 4px;
+    color: white;
+    border: 0;
+}
+
+.footer-section {
+    padding: 40px 20px;
+    background-color: black;
+    color: white;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0 0 20px 0;
+    color: white;
+
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column a {
+    color: white;
+    text-decoration: rgb(129, 55, 31) underline;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.column a:hover {
+    color: red;
+}
+
+/* Container for dropdown */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the button */
+.dropdown-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.dropdown-btn i {
+    margin-left: 10px;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+/* Hover effect for the dropdown links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown on button click */
+.show {
+    display: block;
+}
+
+
+.footer-text {
+    margin-top: 10px;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}

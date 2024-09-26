@@ -1,0 +1,67 @@
+@import url(<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">);
+body{
+    background-color: rgb(45, 41, 41);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 58px;
+    background-color: gray;
+    color: white;
+}
+nav ul li{
+    padding: 0 12px;
+}
+.brand img{
+width: 44px;
+padding: 0 9px;
+
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+.container{
+   min-height: 75vh;
+   background-color: black;
+   color: white;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+display: flex;
+width: 75%;
+margin: 23px auto;
+border-radius: 12px;
+padding: 34px;
+background-image: url(./Thunderfang\ Thor.jpg);
+
+}
+.bottom{
+    position: sticky;
+    height: 140px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.icons{
+    margin-top: 12px;
+}
+.icons{
+    cursor: pointer;
+}
+#bar{
+    width: 90vw;
+}
